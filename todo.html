@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/todo.css">
+    <title>To DO List</title>
+</head>
+<body>
+    <div class="todo">
+        <h3>TO DO LIST</h3>
+    </div>
+    
+    <div class="s-add">
+        <div class="add">
+            <input id="item" type="text" style="margin-top: 1pc; justify-content: space-between; border-style: none; margin-left: 2pc; height: 4vh; padding: 10px;">   
+             <span><input id="date" type="time" style=" height: 4vh; margin-left: 3pc; border-style: none;"></span> 
+              <button onclick="addItems()" style="height: 4vh; width: 20%; border-radius: 15px; margin-left: 2.5pc; border-style: none;">SUBMIT</button>
+     </div>
+    </div>
+
+    <div class="dolist">
+        <div class="dolist2" > 
+            <ul id="items">
+                
+           
+        </div>
+      
+    </div>
+   <script>
+       let itemInput = document.getElementById('item');
+        let itemsContainer = document.getElementById('items');
+        let dates = document.getElementById('date');
+
+        function addItems() {
+            let singleItem = document.createElement('li');
+            singleItem.style.listStyle = 'none';
+            singleItem.style.marginBottom = '20px';
+            singleItem.style.display = 'flex';
+            singleItem.style.padding = '10px'
+            singleItem.style.justifyContent = 'space-between';
+            singleItem.style.width = '50%';
+
+            let itemText = itemInput.value;
+            let itemInfo = document.createTextNode(itemText);
+            // itemText.style.width = '30%';
+            let datetext = dates.value;
+            // datetext.style.width = '30%';
+            let dateinfo = document.createElement('span');
+            let dateResult = document.createTextNode(datetext)
+            let removeBtn = document.createElement('button');
+            let removeBtnText = document.createTextNode('DELETE');
+
+            dateinfo.appendChild(dateResult);
+            removeBtn.appendChild(removeBtnText);
+            singleItem.append(itemInfo, dateinfo, removeBtn);
+            itemsContainer.appendChild(singleItem);
+
+            removeBtn.addEventListener('click', () => {
+                itemsContainer.removeChild(singleItem);
+            })
+
+            document.getElementById('item').value = '';
+            document.getElementById('date').value= '';
+
+        }
+   </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blue;
+}
+.todo h3 {
+  position: relative;
+  left: 35pc;
+  top: 3pc;
+  font-weight: bolder;
+  color: white;
+  font-family: cursive;
+}
+
+.s-add {
+  background-color: white;
+  height: 15vh;
+  width: 50%;
+  margin-left: 20pc;
+  margin-top: 5pc;
+}
+.add {
+  position: relative;
+  top: 1.5pc;
+  height: 8vh;
+  left: 4pc;
+  width: 80%;
+  align-items: center;
+  background-color: blue;
+}
+
+ul {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  margin-top: 3pc;
+  font-family: sans-serif;
+  margin-left: 20pc;
+}
+
+ul li {
+  background-color: white;
+  height: 6vh;
+  font-size: 20px;
+  padding: 5px;
+  justify-content: space-between;
+  list-style: none;
+}
