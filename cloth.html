@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: gainsboro;
+      }
+      #result {
+        display: flex;
+        background-color: transparent;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 70vh;
+        width: 50%;
+        margin-top: -15pc;
+        margin-left: 30pc;
+      } 
+    </style>
+    <title>cloth</title>
+  </head>
+  <body>
+    <div>
+      <h3
+        style="
+          position: relative;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          margin-left: 7pc;
+          padding: 10px;
+          font-style: italic;
+          font-weight: 500;
+          margin-top: 15pc;
+          letter-spacing: 2px;
+          color: red;
+        "
+      >
+        ORDER NOW !!!
+      </h3>
+    </div>
+    <div style="margin-top: -5pc">
+      <input
+        style="
+          position: relative;
+          margin-left: 4pc;
+          background-color: white;
+          border-style: none;
+          height: 5vh;
+          width: 20%;
+          margin-top: 10pc;
+          border-radius: 13px;
+        "
+        type="text"
+        id="cloth"
+      />
+      <button
+        style="
+          height: 5vh;
+          width: 10%;
+          border-radius: 15px;
+          border-style: none;
+          background-color: black;
+          color: white;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        "
+        onclick="display()"
+      >
+        DISPLAY
+      </button>
+      <div id="result"></div>
+    </div>
+    <script>
+      function display() {
+        let cloth = document.getElementById("cloth").value;
+
+        if (cloth === "red") {
+          result.style.backgroundImage =
+            "url(./images/download__4_-removebg-preview.png)";
+          return true;
+        } else if (cloth === "blue") {
+          result.style.backgroundImage =
+            "url(./images/download__3_-removebg-preview.png)";
+          return true;
+        } else if (cloth === "pink") {
+          result.style.backgroundImage =
+            "url(./images/download__2_-removebg-preview.png)";
+          return true;
+        } else if (cloth === "black") {
+          result.style.backgroundImage =
+            "url(./images/download__1_-removebg-preview.png)";
+        } else if (cloth === "green") {
+          result.style.backgroundImage =
+            "url(./images/download__5_-removebg-preview.png)";
+        } else {
+          result.style.backgroundColor = "transparent";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
